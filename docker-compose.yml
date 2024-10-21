@@ -1,0 +1,6 @@
+version: "5.8"
+services :
+web :
+    image : namrata906/car-store:latest
+    ports:
+      - "2000:2000"
