@@ -2,7 +2,7 @@ version: "5.8"
 
 services:
   app:
-   image: namrata906/car-store:latest  
+   build: . 
     ports:
       - "2000:2000"
     volumes:
