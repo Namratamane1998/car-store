@@ -1,7 +1,7 @@
 version: "5.8"
 services:
   app:
-   build: . 
+   image: car-store:latest 
     ports:
       - "2000:2000"
     volumes:
