@@ -1,6 +1,10 @@
-version: "5.8"
-services :
-app :
-    build : .
-    ports :
+version: "3.9"
+
+services:
+  app:
+    build: .
+    ports:
       - "2000:2000"
+    volumes:
+      - .:/app
+    command: ["node", "app.js"]
