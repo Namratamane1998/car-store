@@ -1,6 +1,6 @@
 version: "5.8"
 services :
-web :
+app :
     build : .
     ports :
       - "2000:2000"
