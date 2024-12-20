@@ -1,0 +1,8 @@
+version: "5.8"
+services:
+  app:
+    image: car-store:latest 
+    ports:
+      - "2000:2000"
+    command: ["node", "app.js"]
+
