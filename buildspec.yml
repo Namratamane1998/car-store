@@ -1,0 +1,43 @@
+version: 0.2
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+  #secrets-manager:
+     # key: secret-id:json-key:version-stage:version-id
+     # key: secret-id:json-key:version-stage:version-id
+  #exported-variables:
+     # - variable
+     # - variable
+  #git-credential-helper: yes
+
+phases:
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+      
+  
+  build:
+    commands:
+      - echo Build started on `date`
+      # If you have a build process like compiling TypeScript or bundling, you can add it here
+      # Example: npm run build
+      # tsc # or npm run start:prod
+      - mkdir build
+      - cp appspec.yml build
+      - cp package.json build
+      - cp -r scripts build
+
+artifacts:
+  files:
+  
+    - '**/*'    # Include all files
+  base-directory: build
+
+#cache:
+  #paths:
+    # - node_modules/**/*  # Uncomment to cache node_modules for future builds
